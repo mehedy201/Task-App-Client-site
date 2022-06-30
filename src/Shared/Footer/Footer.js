@@ -2,7 +2,6 @@ import React from 'react';
 import { BsGithub } from 'react-icons/bs';
 import { BsLinkedin } from 'react-icons/bs';
 import { CgWebsite } from 'react-icons/cg';
-import { Link } from 'react-router-dom';
 
 
 const Footer = () => {
