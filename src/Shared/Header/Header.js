@@ -34,7 +34,7 @@ const Header = () => {
                 <li><Link to={'completed-task'} className="font-semibold">Completed Task</Link></li>
             </ul>
           </div>
-          <a href="#" className="font-bold btn btn-ghost normal-case text-xl">Task Note</a>
+          <Link to={'/'} className="font-bold btn btn-ghost normal-case text-xl">Daily Task Note</Link>
         </div>
         <div className="navbar-end hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
