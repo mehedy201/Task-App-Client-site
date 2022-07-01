@@ -34,11 +34,11 @@ const NewTask = () => {
     return (
         <div className='h-100'>
             <div className="flex flex-col w-full border-opacity-50 my-5">
-                <div className="divider"><h2 className='text-xl font-semibold'>New Task</h2></div>
+                <div className="divider"><h2 className='text-xl font-bold'>New Task</h2></div>
             </div>
             <div className='flex justify-center mb-5'>
                 <div className='border p-5 rounded md: w-6/12'>
-                    <h3 className="text-xl">Please type your task name</h3>
+                    <h3 className="text-xl font-semibold">Please type your task name</h3>
                     <p className='mb-4'>If you write task name then press Enter key and go To-Do page and complete task</p>
                     <form onSubmit={handleSubmit(onSubmit)}>
                           <div className="form-control w-full">

@@ -10,9 +10,7 @@ const AllTask = () => {
         fetch('http://localhost:5000/new_task')
             .then(res => res.json())
             .then(data => setTask(data))
-    },[])
-
-    console.log(task)
+    },[task])
     return (
         <div>
             <div className="flex flex-col w-full border-opacity-50 my-5">
