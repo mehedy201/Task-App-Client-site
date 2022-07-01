@@ -1,15 +1,33 @@
-import React, { useRef } from 'react';
+import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 const NewTask = () => {
 
 
-    const taskNameRef = useRef('')
 
-    const handleSubmit = event => {
-        event.preventDefault();
-        const taskName = taskNameRef.current.value;
-        console.log(taskName);
-    }
+    // Use React hooks form  --------------
+    const { register, formState: { errors }, handleSubmit, reset } = useForm();
+    const onSubmit = data =>{
+        
+        fetch('http://localhost:5000/new_task',{
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(data => {
+            // console.log(data);
+            if(data.success){
+                toast('Added Your Review')
+                reset();
+            }
+                
+        })
+    };
+
+    
 
 
 
@@ -22,10 +40,25 @@ const NewTask = () => {
                 <div className='border p-5 rounded md: w-6/12'>
                     <h3 className="text-xl">Please type your task name</h3>
                     <p className='mb-4'>If you write task name then press Enter key and go To-Do page and complete task</p>
-                    <form onSubmit={handleSubmit}>
-                        <input ref={taskNameRef} type="text" placeholder="Type task name" className="input w-full input-bordered" />
-                        <button id='buttonId' type='submit' className='btn btn-sm mt-2 float-right'>Add</button>
-                    </form>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                          <div className="form-control w-full">
+                              {/* ------------------ Name Field ------------------ */}
+                               <input 
+                                  type="text" 
+                                  name='taskName'
+                                  placeholder="Please pest your Photo URL" 
+                                  className="input input-bordered w-full"
+                                  {...register("photoUrl", { required: true })} 
+                                  />
+                               <label className="label">
+                                  {errors.email?.type === 'name' && <span className="text-red-500">{errors.name.message}</span> }
+                               </label> 
+                              
+
+                               {/* ------------------ Submit Button ------------------ */}
+                               <input className="btn btn-sm float-right" type="submit" value={'Add'}/>
+                          </div>
+                      </form>
                 </div>
             </div>
         </div>
