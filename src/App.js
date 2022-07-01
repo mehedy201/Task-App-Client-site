@@ -16,7 +16,7 @@ function App() {
         <Routes>
           <Route path='/' element={<AllTask/>}></Route>
           <Route path='/all-task' element={<AllTask/>}></Route>
-          <Route path='/new-task' element={<NewTask/>}></Route>
+          <Route path='/new_task' element={<NewTask/>}></Route>
           <Route path='/completed-task' element={<CompletedTask/>}></Route>
         </Routes>
       <Footer></Footer>

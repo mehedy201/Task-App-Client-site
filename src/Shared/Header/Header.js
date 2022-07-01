@@ -32,7 +32,7 @@ const Header = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
                 <li><Link to={'all-task'} className="font-semibold">To-Do <BsListTask /></Link></li>
-                <li><Link to={'new-task'} className="font-semibold">New Task <AiOutlinePlusCircle /></Link></li>
+                <li><Link to={'new_task'} className="font-semibold">New Task <AiOutlinePlusCircle /></Link></li>
                 <li><Link to={'completed-task'} className="font-semibold">Completed Task <AiOutlineFileDone /></Link></li>
             </ul>
           </div>
@@ -41,7 +41,7 @@ const Header = () => {
         <div className="navbar-end hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
             <li><Link to={'all-task'} className="font-semibold">To-Do <BsListTask /></Link></li>
-            <li><Link to={'new-task'} className="font-semibold">New Task <AiOutlinePlusCircle /></Link></li>
+            <li><Link to={'new_task'} className="font-semibold">New Task <AiOutlinePlusCircle /></Link></li>
             <li><Link to={'completed-task'} className="font-semibold">Completed Task <AiOutlineFileDone /></Link></li>
           </ul>
         </div>

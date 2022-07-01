@@ -19,7 +19,7 @@ const SingleTask = ({singleTask}) => {
     const { register, formState: { errors }, handleSubmit, reset, control } = useForm();
     const onSubmit = data =>{
 
-        const url = `http://localhost:5000/new_task/${_id}`
+        const url = `https://true-loonie-30043.herokuapp.com/new_task/${_id}`
         
         fetch(url,{
             method: 'PUT',

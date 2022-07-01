@@ -7,7 +7,7 @@ const AllTask = () => {
     const [task, setTask] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/new_task')
+        fetch('https://true-loonie-30043.herokuapp.com/new_task')
             .then(res => res.json())
             .then(data => setTask(data))
     },[task])

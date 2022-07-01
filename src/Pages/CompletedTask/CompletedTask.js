@@ -9,7 +9,7 @@ const CompletedTask = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/new_task')
+        fetch('https://true-loonie-30043.herokuapp.com/new_task')
             .then(res => res.json())
             .then(data => setCompletedTask(data))
     },[])
@@ -17,7 +17,7 @@ const CompletedTask = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure to Delete');
         if(proceed){
-            const url = `http://localhost:5000/new_task/${id}`;
+            const url = `https://true-loonie-30043.herokuapp.com/new_task/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

@@ -9,7 +9,7 @@ const NewTask = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
     const onSubmit = data =>{
         
-        fetch('http://localhost:5000/new_task',{
+        fetch('https://true-loonie-30043.herokuapp.com/new_task',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
