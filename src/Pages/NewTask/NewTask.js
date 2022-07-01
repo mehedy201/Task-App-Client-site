@@ -20,7 +20,7 @@ const NewTask = () => {
         .then(data => {
             // console.log(data);
             if(data.success){
-                toast('Added Your Review')
+                toast('Go To-Do Page')
                 reset();
             }
                 
