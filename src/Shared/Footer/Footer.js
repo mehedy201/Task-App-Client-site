@@ -6,7 +6,7 @@ import { CgWebsite } from 'react-icons/cg';
 
 const Footer = () => {
     return (
-            <footer className="footer items-center p-4 bg-neutral text-neutral-content rounded">
+            <footer className="footer items-center p-4 bg-neutral text-neutral-content rounded mt-5">
                 <div className="items-center grid-flow-col">
                   <h1 className="font-bold text-xl">Daily Task Note</h1>
                   <p>Copyright &copy; 2022 - All right reserved Md. Mehedi Hasan</p>

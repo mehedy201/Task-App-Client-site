@@ -1,12 +1,14 @@
 import React from "react";
 import { AiOutlinePlusCircle } from 'react-icons/ai';
+import { AiOutlineFileDone } from 'react-icons/ai';
+import { BsListTask } from 'react-icons/bs';
 import { Link } from "react-router-dom";
 
 
 const Header = () => {
   return (
     <header>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-100 p-0">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -29,18 +31,18 @@ const Header = () => {
               tabIndex="0"
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
-                <li><Link to={'all-task'} className="font-semibold">All Task</Link></li>
+                <li><Link to={'all-task'} className="font-semibold">To-Do <BsListTask /></Link></li>
                 <li><Link to={'new-task'} className="font-semibold">New Task <AiOutlinePlusCircle /></Link></li>
-                <li><Link to={'completed-task'} className="font-semibold">Completed Task</Link></li>
+                <li><Link to={'completed-task'} className="font-semibold">Completed Task <AiOutlineFileDone /></Link></li>
             </ul>
           </div>
-          <Link to={'/'} className="font-bold btn btn-ghost normal-case text-xl">Daily Task Note</Link>
+          <Link to={'/'} className="font-bold btn btn-ghost normal-case text-xl bg-gray-200">Daily Task Note</Link>
         </div>
         <div className="navbar-end hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
-            <li><Link to={'all-task'} className="font-semibold">All Task</Link></li>
+            <li><Link to={'all-task'} className="font-semibold">To-Do <BsListTask /></Link></li>
             <li><Link to={'new-task'} className="font-semibold">New Task <AiOutlinePlusCircle /></Link></li>
-            <li><Link to={'completed-task'} className="font-semibold">Completed Task</Link></li>
+            <li><Link to={'completed-task'} className="font-semibold">Completed Task <AiOutlineFileDone /></Link></li>
           </ul>
         </div>
       </div>
