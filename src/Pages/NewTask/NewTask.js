@@ -46,9 +46,9 @@ const NewTask = () => {
                                <input 
                                   type="text" 
                                   name='taskName'
-                                  placeholder="Please pest your Photo URL" 
+                                  placeholder="Please type your Task Name" 
                                   className="input input-bordered w-full"
-                                  {...register("photoUrl", { required: true })} 
+                                  {...register("taskName", { required: true })} 
                                   />
                                <label className="label">
                                   {errors.email?.type === 'name' && <span className="text-red-500">{errors.name.message}</span> }
